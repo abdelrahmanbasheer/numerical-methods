@@ -26,7 +26,7 @@ const newton = () => {
       return (
         <div>
            <h1 className='m-2'>enter Function:</h1>
-          <input type="text" name="" id="functEq" value={functionEq} onChange={(e)=>setfunctionEq(e.target.value)} placeholder="x^2-2*x - 3" className='border-2  border-black m-2 p-2'/>
+          <input type="text" name="" id="functEq"  onChange={(e)=>setfunctionEq(e.target.value)} placeholder="x^2-2*x - 3" className='border-2  border-black m-2 p-2'/>
           <h1 className='m-2'>enter Xi:</h1>
           <input type="text" name="" id=""   onChange={(e)=>setfirstValue(parseInt(e.target.value))} className='border-2 border-black m-2 p-2'/>
           <h4 className='m-5 p-2'>{output}</h4>

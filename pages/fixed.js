@@ -23,9 +23,9 @@ const fixed = () => {
     return (
         <div>
            <h1 className='m-2'>enter Function:</h1>
-          <input type="text" name="" id="functEq" value={""} onChange={(e)=>setfunctionEq(e.target.value)} placeholder="x**2-2*x - 3" className='border-2  border-black m-2 p-2'/>
+          <input type="text" name="" id="functEq"  onChange={(e)=>setfunctionEq(e.target.value)} placeholder="x**2-2*x - 3" className='border-2  border-black m-2 p-2'/>
           <h1 className='m-2'>enter Xi:</h1>
-          <input type="text"    typeof="number" step="any" onChange={(e)=>setfirstValue(parseFloat(e.target.value))} className='border-2 border-black m-2 p-2' />
+          <input type="text"     onChange={(e)=>setfirstValue(parseFloat(e.target.value))} className='border-2 border-black m-2 p-2' />
           <h1 className='m-2'>enter no of iterations:</h1>
           <input type="text" name="" id="B"  onChange={(e)=>setSecondValue(parseInt(e.target.value))}  className='border-2 border-black m-2 p-2'/>
          
