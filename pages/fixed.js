@@ -11,7 +11,7 @@ const fixed = () => {
         const eq = new Function("x", `return ${modifiedEqu}`);
         const geq=new Function("x", `return ${modifiedG}`);
         let i=0;
-        while(i!==b){
+        while(i!==b &&Math.abs(geq(a))>0.01){
             a=geq(a)
             geq(a)
             i++

@@ -19,7 +19,7 @@ const secant = () => {
         i++
     }
     setOutput(c)
-    return c
+    
    }
 //    x**2-2*x-3 
 
