@@ -4,12 +4,12 @@ const newton = () => {
     const [a, setfirstValue] = useState(0)
     const [output, setOutput] = useState(0)
     const [functionEq, setfunctionEq] = useState("")
-    const derev = derivative(functionEq, "x").toString();
-    const modifiedDer = derev.replace(/\^/g, "**")
-    const derevreq = new Function("x", `return ${modifiedDer}`);
-    const modifiedEqu = functionEq.replace(/\^/g, "**").toLowerCase();
-    const eq = new Function("x", `return ${modifiedEqu}`);
     function newton(a){
+        const derev = derivative(functionEq, "x").toString();
+        const modifiedDer = derev.replace(/\^/g, "**")
+        const derevreq = new Function("x", `return ${modifiedDer}`);
+        const modifiedEqu = functionEq.replace(/\^/g, "**").toLowerCase();
+        const eq = new Function("x", `return ${modifiedEqu}`);
     let fun=eq(a)
     let derevFun=derevreq(a)
 

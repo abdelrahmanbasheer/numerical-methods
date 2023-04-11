@@ -5,10 +5,10 @@ const modfsecant = () => {
     const [b, setSecondValue] = useState(0)
     const [functionEq, setfunctionEq] = useState("")
     const [output, setOutput] = useState(0)
+    function  secant(a,b){
     const modifiedEqu = functionEq.replace(/([a-zA-Z0-9])\^/g, "**").toLowerCase()
     const eq = new Function("x", `return ${modifiedEqu}`);
   let i=0
-  function  secant(a,b){
       let N=Math.round(Math.log((b-a)/0.01)/Math.log(2))
       let c = (b - eq(b) * ((b - a) / (eq(b) - eq(a)))).toFixed(4)
       let fqA = eq(a);

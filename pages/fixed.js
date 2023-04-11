@@ -5,21 +5,22 @@ const fixed = () => {
     const [b, setSecondValue] = useState(0)
     const [functionEq, setfunctionEq] = useState("")
     const [output, setOutput] = useState(0)
-    const modifiedEqu = " (Math.E**-x)-x"
-    const modifiedG=modifiedEqu.concat("+","x")
-    const eq = new Function("x", `return ${modifiedEqu}`);
-    const geq=new Function("x", `return ${modifiedG}`);
-    let i=0;
     function fixed(a,b){
-        while(i!=5){
+        const modifiedEqu = functionEq
+        const modifiedG=modifiedEqu.concat("+","x")
+        const eq = new Function("x", `return ${modifiedEqu}`);
+        const geq=new Function("x", `return ${modifiedG}`);
+        let i=0;
+        while(i!==b){
             a=geq(a)
-           geq(a)
-
+            geq(a)
             i++
         }
         setOutput(a.toFixed(4))
-        
+       
     }
+
+    // (Math.E**-x)-x
     return (
         <div>
            <h1 className='m-2'>enter Function:</h1>
@@ -31,7 +32,7 @@ const fixed = () => {
          
           
           <h4 className='m-5 p-2'>{output}</h4>
-          <button onClick={()=>fixed(a)} className="p-2 border-black border-2 rounded-full m-2">calculate</button>
+          <button onClick={()=>fixed(a,b)} className="p-2 border-black border-2 rounded-full m-2">calculate</button>
         </div>
       )
 }
