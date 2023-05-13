@@ -1,3 +1,5 @@
+import Hero from '@/components/Hero';
+import LowerHero from '@/components/LowerHero';
 import React, {useState } from 'react'
 
 const bisection = () => { 
@@ -52,15 +54,8 @@ const eq = new Function("x", `return ${functionEq}`);
 
   return (
     <div>
-       <h1 className='m-2'>enter Function:</h1>
-      <input type="text" name="" id="functEq" value={functionEq} onChange={(e)=>setfunctionEq(e.target.value)} placeholder="x**2-2*x - 3" className='border-2  border-black m-2 p-2'/>
-      <h1 className='m-2'>enter A:</h1>
-      <input type="text" name="" id=""  value={a} onChange={(e)=>setfirstValue(parseInt(e.target.value))} className='border-2 border-black m-2 p-2'/>
-      <h1 className='m-2'>enter B:</h1>
-      <input type="text" name="" id="B" value={b} onChange={(e)=>setSecondValue(parseInt(e.target.value))}  className='border-2 border-black m-2 p-2'/>
-      <button onClick={()=>bisection(a, b)} className="p-2 border-black border-2 rounded-full ">calculate</button>
-      <h4></h4>
-     
+    <Hero></Hero>
+     <LowerHero></LowerHero>
     </div>
   )
 }
