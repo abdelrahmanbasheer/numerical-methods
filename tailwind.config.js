@@ -8,9 +8,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+       'lowerhero': "url('/background12.jpg')",
+       'regbg': "url('/background14.jpg')",
+       'signinbg': "url('/background16.jpg')"
       },
     },
   },
